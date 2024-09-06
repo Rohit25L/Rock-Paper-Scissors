@@ -6,16 +6,25 @@ let win =document.querySelector("#winn");
 let rock = document.querySelector("#rock");
 let paper =document.querySelector("#paper");
 let scissor=document.querySelector("#scissor");
-
+let compImg1 = document.querySelector("#paper1");
+let compImg2 = document.querySelector("#rock1");
+let compImg3 = document.querySelector("#scissor1");
 
 let game =["rock","paper","scissor"];
 let you =0;
 let comp =0;
+console.log(compImg1)
 
 
 rock.addEventListener("click",()=>{
     // console.log(game[0])
     let a =Math.floor(Math.random()*3);
+    compChoice(a);
+    // if (a==0){
+    //     compImg2.classList.add("comp-brcolor")
+    //     compImg1.classList.remove("comp-brcolor")
+    //     compImg3.classList.remove("comp-brcolor")
+    // } 
     console.log(a)
     if (game[a]==="scissor"){
         win.innerHTML=`you win the game, you choose 'Rock' computer chose ,${game[a]}`
@@ -39,10 +48,14 @@ rock.addEventListener("click",()=>{
         comp++;
         scoreC.innerHTML=`${comp}`
     }
+
     console.log(comp,you)
+
 })
 paper.addEventListener("click",()=>{
     let a =Math.floor(Math.random()*3);
+    compChoice(a);
+
     console.log(a)
     if (game[a]==="rock"){
         win.innerHTML=`you win the game, you choose 'paper' computer chose ,${game[a]}`
@@ -70,6 +83,7 @@ paper.addEventListener("click",()=>{
 })
 scissor.addEventListener("click",()=>{
     let a =Math.floor(Math.random()*3);
+    compChoice(a);
     console.log(a)
     if (game[a]==="paper"){
         win.innerHTML=`you win the game, you choose 'scissor' computer chose ,${game[a]}`
@@ -95,3 +109,19 @@ scissor.addEventListener("click",()=>{
     }
     console.log(comp,you)
 })
+ compChoice =(max)=>{
+    console.log("rohit",max)
+        if (max==0){
+        compImg2.classList.add("comp-brcolor")
+        compImg1.classList.remove("comp-brcolor")
+        compImg3.classList.remove("comp-brcolor")
+    }  else if (max==1){
+            compImg2.classList.remove("comp-brcolor")
+            compImg1.classList.add("comp-brcolor")
+            compImg3.classList.remove("comp-brcolor")
+        } else if (max==2){
+            compImg2.classList.remove("comp-brcolor")
+            compImg1.classList.remove("comp-brcolor")
+            compImg3.classList.add("comp-brcolor")
+        } 
+}

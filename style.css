@@ -36,17 +36,17 @@ img{
     /* border: 3px solid black; */
 
 }
-img:hover{
+.img0:hover{
     border: 3px solid black;
 }
-img:active{
+.img0:active{
     height: 19vmin;
     width: 20vmin;
     opacity: 10;
 }
 .score{
     /* background-color: rgb(126, 204, 220); */
-    height: 28vh;
+    height: 20vh;
     display: flex;
     justify-content: center;
     gap: 6.5vmin;
@@ -54,7 +54,7 @@ img:active{
 
 }
 .winner-div{
-    height:10vh;
+    height:20vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -86,4 +86,33 @@ img:active{
 }
 #scoreC{
     font-size: 10vmin;
+}
+.comp-choose{
+    display: flex;
+    /* justify-content: start; */
+    align-items: end;
+    flex-direction: column;
+    /* background-color: #3E2723; */
+    gap: 1.5vmin;
+}
+.comp-container{
+    height: max-content;
+    width: max-content;
+    display: flex;
+    gap: 0.5vmin;
+
+    
+}
+.img1{
+    height: 10vmin;
+    width: 11vmin;
+    border-radius: 50vmin;
+    object-fit: cover;
+}
+h2{
+    margin-right: 70px;
+}
+
+.comp-brcolor{
+    border: 2px solid black;
 }
