@@ -17,15 +17,8 @@ console.log(compImg1)
 
 
 rock.addEventListener("click",()=>{
-    // console.log(game[0])
     let a =Math.floor(Math.random()*3);
     compChoice(a);
-    // if (a==0){
-    //     compImg2.classList.add("comp-brcolor")
-    //     compImg1.classList.remove("comp-brcolor")
-    //     compImg3.classList.remove("comp-brcolor")
-    // } 
-    console.log(a)
     if (game[a]==="scissor"){
         win.innerHTML=`you win the game, you choose 'Rock' computer chose ,${game[a]}`
         console.log("you win the game, you choose 'Rock' computer chose",game[a])
@@ -48,15 +41,10 @@ rock.addEventListener("click",()=>{
         comp++;
         scoreC.innerHTML=`${comp}`
     }
-
-    console.log(comp,you)
-
 })
 paper.addEventListener("click",()=>{
     let a =Math.floor(Math.random()*3);
     compChoice(a);
-
-    console.log(a)
     if (game[a]==="rock"){
         win.innerHTML=`you win the game, you choose 'paper' computer chose ,${game[a]}`
         win.classList.add("win-color")
@@ -66,7 +54,6 @@ paper.addEventListener("click",()=>{
         scoreY.innerHTML=`${you}`
     }
     else if (game[a]==="paper"){
-        console.log("draw")
         win.classList.remove("win-color")
         win.classList.remove("lose-color")
         win.innerHTML=`Its a draw , computer picked ${game[a]}`
@@ -79,12 +66,10 @@ paper.addEventListener("click",()=>{
         comp++;
         scoreC.innerHTML=`${comp}`
     }
-    console.log(comp,you)
 })
 scissor.addEventListener("click",()=>{
     let a =Math.floor(Math.random()*3);
     compChoice(a);
-    console.log(a)
     if (game[a]==="paper"){
         win.innerHTML=`you win the game, you choose 'scissor' computer chose ,${game[a]}`
         win.classList.add("win-color")
@@ -107,10 +92,8 @@ scissor.addEventListener("click",()=>{
         comp++;
         scoreC.innerHTML=`${comp}`
     }
-    console.log(comp,you)
 })
  compChoice =(max)=>{
-    console.log("rohit",max)
         if (max==0){
         compImg2.classList.add("comp-brcolor")
         compImg1.classList.remove("comp-brcolor")
