@@ -9,6 +9,7 @@ let scissor=document.querySelector("#scissor");
 let compImg1 = document.querySelector("#paper1");
 let compImg2 = document.querySelector("#rock1");
 let compImg3 = document.querySelector("#scissor1");
+let restartBut = document.querySelector(".restart");
 
 let game =["rock","paper","scissor"];
 let you =0;
@@ -74,18 +75,15 @@ scissor.addEventListener("click",()=>{
         win.innerHTML=`you win the game, you choose 'scissor' computer chose ,${game[a]}`
         win.classList.add("win-color")
         win.classList.remove("lose-color")
-        console.log("you win the game, you choose 'scissor' computer chose",game[a])
         you++;
         scoreY.innerHTML=`${you}`
     }
     else if (game[a]==="scissor"){
-        console.log("draw")
         win.classList.remove("win-color")
         win.classList.remove("lose-color")
         win.innerHTML=`Its a draw , computer picked ${game[a]}`
     }
     else{
-        console.log("you loose! your is scissor and,computer chose",game[a])
         win.innerHTML=`you loose! your is scissor and,computer chose,${game[a]}`
         win.classList.add("lose-color")
         win.classList.remove("win-color")
@@ -108,3 +106,16 @@ scissor.addEventListener("click",()=>{
             compImg3.classList.add("comp-brcolor")
         } 
 }
+
+restartBut.addEventListener("click",()=>{
+    you = 0;
+    comp =0;
+    scoreC.innerHTML=`${comp}`
+    scoreY.innerHTML=`${you}`
+    win.innerHTML=`pick your choice`
+    win.classList.remove("lose-color");
+    win.classList.remove("win-color");
+    compImg2.classList.remove("comp-brcolor")
+    compImg1.classList.remove("comp-brcolor")
+    compImg3.classList.remove("comp-brcolor")
+})

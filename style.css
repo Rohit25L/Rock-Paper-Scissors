@@ -57,8 +57,11 @@ img{
     height:20vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
-    /* background-color: #3E2723; */
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    
+    gap: 5vmin;
 }
 .winner{
     background-color: #87CEEB;
@@ -115,4 +118,17 @@ h2{
 
 .comp-brcolor{
     border: 2px solid black;
+}
+.restart{
+    height: 6vmin;
+    width: 30vmin;
+    background-color: #3E2723;
+    color: white;
+    font-weight: 900;
+    font-size: large;
+    border-radius: 10vmin;
+}
+.restart:active{
+    height: 5.8vmin;
+    width: 29vmin;
 }
